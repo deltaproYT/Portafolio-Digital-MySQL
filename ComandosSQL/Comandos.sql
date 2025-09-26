@@ -77,3 +77,23 @@ SELECT * FROM users WHERE first_name IN ('Leonard','Sheldon'); -- Busca las fila
 -- BETWEEN --
 SELECT * FROM users WHERE age BETWEEN 15 AND 30; -- Busca las filas de datos donde el dato de la columna 'age' este ENTRE 15 y 30 --
 
+
+-- AS --
+SELECT last_name AS 'surnames' FROM users; -- Renombra la columna 'last_name' como 'surnames' --
+
+
+-- CONCAT --
+SELECT CONCAT(first_name, ' ', last_name) FROM users; -- Concadena los datos de la clumna first_name y last_name y añade un espacio entre ellos (no añade el espacio de manera automatica) --
+
+SELECT CONCAT(first_name, ' ', last_name) AS 'full_name' FROM users; -- Concadena los datos de la clumna first_name y last_name y añade un espacio entre ellos (no añade el espacio de manera automatica) y lo renombra como 'full_name' --
+
+
+-- GROUP BY --
+SELECT age FROM users GROUP BY age; -- Selecciona la columna 'age' y los agrupa por sus valores unicos --
+
+SELECT age FROM users GROUP BY age ORDER BY age DESC; -- Selecciona la columna 'age', los agrupa por sus valores unicos y los ordena de forma descendente --
+
+SELECT COUNT(age), age FROM users GROUP BY age ORDER BY age DESC; -- Selecciona la columna 'age', los agrupa por sus valores unicos, ubica las cantidades de repeticiones y los ordena de forma descendente --
+
+
+-- 
