@@ -63,3 +63,17 @@ SELECT COUNT(email) FROM users; -- Imprime la cantidad de usuarios con los datos
 
 
 -- SUM() --
+SELECT SUM(age) FROM users; -- Imprime la sumatoria de todos los valores de la columna 'age' --
+
+
+-- AVG() --
+SELECT AVG(age) FROM users; -- Imprime el promedio de todos los valores de la columna 'age'
+
+
+-- IN --
+SELECT * FROM users WHERE first_name IN ('Leonard','Sheldon'); -- Busca las filas que contengan los datos 'Leonard' y 'Sheldon' en la columna 'first_name' --
+
+
+-- BETWEEN --
+SELECT * FROM users WHERE age BETWEEN 15 AND 30; -- Busca las filas de datos donde el dato de la columna 'age' este ENTRE 15 y 30 --
+
