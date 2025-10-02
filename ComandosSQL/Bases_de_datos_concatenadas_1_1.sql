@@ -1,0 +1,14 @@
+-- TABLA 1 --
+CREATE TABLE dni_users (
+dni int NOT NULL PRIMARY KEY,
+country varchar(250),
+dni_creation_date date, 
+data_entry_date datetime DEFAULT (current_timestamp()),
+penal_antecedents bool NOT NULL,
+idusers int NOT NULL,
+CHECK(dni_creation_date >= DATE_SUB('2025-10-02', INTERVAL 18 YEAR)),
+FOREIGN KEY(idusers) REFERENCES users(idusers)
+);
+
+-- FOREIGN KEY --
+-- FOREIGN KEY('<columna dentro de la tabla>') REFERENCES '<Tabla a concatenar>'('<columna de la tabla a concatenar>') 
